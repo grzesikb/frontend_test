@@ -62,11 +62,11 @@
     }
 
     &::before {
-      left: -60px; // Pozycjonowanie kreski przed napisem
+      left: -5vw;
     }
 
     &::after {
-      right: -60px; // Pozycjonowanie kreski po napisie
+      right: -5vw;
     }
   }
 
@@ -78,6 +78,9 @@
     transform: translateY(70%);
     opacity: 0;
     transition: 0.5s ease;
+    -webkit-box-shadow: 0px 0px 38px 0px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 0px 38px 0px rgb(0, 0, 0);
+    box-shadow: 0px 0px 38px 0px rgb(0, 0, 0);
 
     &__list {
       width: 19vw;
