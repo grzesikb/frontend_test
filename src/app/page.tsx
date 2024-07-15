@@ -5,7 +5,7 @@ import Header from "@/components/templates/Header";
 import MainContent from "@/components/templates/MainContent";
 import Footer from "@/components/templates/Footer";
 
-import { fetchData } from "@/utils/services";
+import { fetchData } from "@/lib/services";
 
 const Home = async () => {
   const data = await fetchData();
