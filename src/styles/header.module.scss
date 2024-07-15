@@ -1,0 +1,95 @@
+/* It should be called navbar, but that's what it was called in the recruitment task so I'm sticking with it ;) */
+.header {
+  z-index: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-height: 10vh;
+  min-height: 7vh;
+  padding: 1.95% 3.22%;
+  background-color: rgb(11, 12, 16);
+
+  &__text {
+    font-size: 2vw;
+    font-weight: 300;
+    letter-spacing: 0.1%;
+    text-align: left;
+  }
+  /* if I use scss files as modules I can't do it
+     according to BEM, i.e. header__text--bold */
+  &__text_bold {
+    margin-left: 3.5%;
+    font-weight: 600;
+  }
+
+  &__personalInfo {
+    font-size: 2vw;
+    font-weight: 200;
+    letter-spacing: 0.1%;
+    text-align: right;
+  }
+
+  &::after {
+    content: "";
+    z-index: 1;
+    position: fixed;
+    top: 1.1%;
+    left: 2.1%;
+    width: 4.6vw;
+    height: 4.6vw;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: rgb(48, 48, 48);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &:hover::after {
+    background: rgb(205, 116, 1);
+    background: -moz-linear-gradient(
+      94deg,
+      rgba(205, 116, 1, 1) 0%,
+      rgb(254, 158, 35) 100%
+    );
+    background: -webkit-linear-gradient(
+      94deg,
+      rgba(205, 116, 1, 1) 0%,
+      rgba(254, 158, 35, 1) 100%
+    );
+    background: linear-gradient(
+      94deg,
+      rgba(205, 116, 1, 1) 0%,
+      rgba(254, 158, 35, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cd7401",endColorstr="#fe9e23",GradientType=1);
+  }
+}
+
+.header svg {
+  z-index: 2;
+  cursor: pointer;
+  position: fixed;
+  top: 2.6%;
+  left: 3.1%;
+  min-width: 30px;
+  min-height: 30px;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .header::after {
+    top: 1.5%;
+    left: 1.1%;
+  }
+  .header {
+    &__text {
+      font-size: 4vw;
+    }
+    &__personalInfo {
+      font-size: 4vw;
+    }
+  }
+}

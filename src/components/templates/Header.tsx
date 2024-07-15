@@ -1,0 +1,48 @@
+"use client";
+import React from "react";
+import styles from "@/styles/header.module.scss";
+import { useRouter } from "next/navigation";
+
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
+
+const Header = () => {
+  const router = useRouter();
+
+  const isShowPersonalInfo = useSelector(
+    (state: RootState) => state.settings.isShowPersonalInfo
+  );
+
+  const handleClickLogo = async () => {
+    router.push("/");
+  };
+
+  return (
+    <nav className={styles.header}>
+      <svg
+        width="3vw"
+        height="3vw"
+        viewBox="0 0 15 16"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        onClick={handleClickLogo}
+      >
+        <path
+          d="M14.0511237,0.0421011299 L12.7732602,14.3574131 L7.02921611,15.9498508 L1.30098773,14.3596559 L0.0244776255,0.0421011299 L14.0511237,0.0421011299 Z M7.03780069,4.72479076 L4.55368906,4.72479076 L4.71416638,6.52294884 L7.03780069,6.52294884 L11.1134993,6.52294884 L11.0706538,6.99448148 L10.6580144,11.6174271 L10.6316034,11.9140975 L7.03780069,12.9101198 L7.02971882,12.9126531 L3.43270662,11.9140975 L3.18669295,9.15694241 L4.94943,9.15694241 L5.07444764,10.5574261 L7.03010551,11.0854932 L7.03172959,11.0850606 L8.99021036,10.5563047 L9.19403585,8.27891876 L7.03780069,8.27891876 L3.10823307,8.27891876 L2.67664575,3.43988943 L2.63461229,2.96878213 L7.03780069,2.96878213 L11.4305097,2.96878213 L11.3885149,3.43988943 L11.3085083,4.33009386 L11.2732806,4.72479076 L7.03780069,4.72479076 Z"
+          fill="#FFFFFF"
+          fill-rule="evenodd"
+        ></path>
+      </svg>
+
+      <p className={styles.header__text}>
+        Zadanie
+        <span className={styles.header__text_bold}>rekrutacyjne</span>
+        {isShowPersonalInfo && (
+          <div className={styles.header__personalInfo}>Bartłomiej Grzesik</div>
+        )}
+      </p>
+    </nav>
+  );
+};
+
+export default Header;
