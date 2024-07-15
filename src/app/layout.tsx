@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.scss";
 import Providers from "@/components/providers/Providers";
 
-const inter = Inter({ subsets: ["latin"] });
+const opensans = Open_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Bartłomiej Grzesik",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={opensans.className}>
         <Providers>{children}</Providers>
       </body>
     </html>
