@@ -11,7 +11,7 @@ CSS IS AWESOME w footerze zostało zrobione, lecz bez "po najechaniu myszką ram
 ### Link do postawionej na serwerze aplikacji
 
 ```bash
-nabthat.bartekgrzesik.pl
+https://bartlomiej-grzesik-nabthat.vercel.app/
 ```
 
 #ENG
@@ -29,5 +29,5 @@ CSS IS AWESOME in the footer was done, but without "when hovered over with the m
 ### Link to the application placed on the server
 
 ```bash
-nabthat.bartekgrzesik.pl
+https://bartlomiej-grzesik-nabthat.vercel.app/
 ```
