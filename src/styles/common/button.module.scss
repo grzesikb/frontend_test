@@ -1,0 +1,68 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  min-width: 100px;
+  padding: 10px 0;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  color: rgb(162, 168, 184);
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  border: 2px solid rgb(203, 206, 213);
+  border-radius: 4px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:hover {
+    color: rgb(255, 255, 255);
+    background: rgb(205, 116, 1);
+    background: -moz-linear-gradient(
+      94deg,
+      rgba(205, 116, 1, 1) 0%,
+      rgb(254, 158, 35) 100%
+    );
+    background: -webkit-linear-gradient(
+      94deg,
+      rgba(205, 116, 1, 1) 0%,
+      rgba(254, 158, 35, 1) 100%
+    );
+    background: linear-gradient(
+      94deg,
+      rgba(205, 116, 1, 1) 0%,
+      rgba(254, 158, 35, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cd7401",endColorstr="#fe9e23",GradientType=1);
+  }
+
+  &__iconEnd {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+}
+
+.buttonDDM {
+  width: 20%;
+  min-width: 200px;
+  padding: 5px 0;
+  border-color: rgb(33, 37, 41);
+
+  &:hover svg {
+    fill: rgb(255, 255, 255);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .button:nth-child(1) {
+    margin-bottom: 5%;
+  }
+}

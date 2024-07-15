@@ -1,0 +1,32 @@
+.section {
+  width: 33.33%;
+  height: 100%;
+  padding: 2%;
+
+  &__header {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15%;
+    text-shadow: 1.5px 1.5px 2px rgb(0, 0, 0);
+  }
+
+  &__btnOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    width: 50%;
+
+    &__btnOptions {
+      flex-direction: column;
+    }
+  }
+  .section:nth-child(3) {
+    width: 100%;
+  }
+}
