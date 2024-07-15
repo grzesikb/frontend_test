@@ -63,7 +63,8 @@ const MainContent = ({ initialData }: IMainContentProps) => {
       }
 
       if (!isTextAlreadyUsed(newText)) {
-        setTextContent([...textContent, newText]);
+        const updatedContent = [...textContent, newText].sort();
+        setTextContent(updatedContent);
       } else {
         alert(`${newText} - This text is already used.`);
       }
@@ -81,7 +82,7 @@ const MainContent = ({ initialData }: IMainContentProps) => {
         const randomIndex = Math.floor(Math.random() * jsonData.length);
         newText = jsonData[randomIndex];
       }
-      setTextContent([newText]);
+      setTextContent([newText].sort());
     }
   };
 
